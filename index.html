@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Base things you need -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Day</title>
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="./Styles/base.css">
+
+    <!-- font in use -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- meta data for your viewing experience -->
+        <meta name="description" content="This site provides a random scripture">
+        <meta name="author" content="UplandWave">
+        <meta property="og:title" content="BOM Day">
+        <meta property="og:description" content="This is a good site to read the word of God">
+        <meta property="og:image" content="/Images/favicon.ico">
+        <meta property="og:url" content="https://uplandwave.github.io/BOM-Day/">
+        <meta property="og:type" content="website">
+
+    <!-- favcon for a better look -->
+        <link rel="icon" href="./Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- settings -->
+    <div class="settings-icon" id="settings-icon">&#9881;</div>
+    <!-- the container holding the verse -->
+    <div class="container">
+        
+        <!-- time bandits -->
+        <div id="time" class="time">Loading time...</div>
+
+        <!-- we have the meat -->
+        <div class="box">
+            <h1>Random Book of Mormon Verse</h1>
+            <div id="verse" class="verse">Loading...</div>
+        </div>
+        
+        <!-- Favorites Queue -->
+        <!-- <div class="favorites">
+            <h2>Favorites</h2>
+            <ul id="favorites-list"></ul>
+            <div id="add-favorite" class="add-favorite">&#43; </div>
+        </div> -->
+        <div class="favorites" id="favorites">
+            <h2>Favorites</h2>
+            <div class="favorite add-favorite" id="add-favorite">+</div>
+        </div>
+    </div>
+
+    <!-- footer holding footer things -->
+    <footer>
+        <p>Created by UplandWave | 2024 | Under open source license |
+        <div class="info-icon" id="info-icon">&#9432;</div>
+        <div class="tooltip" id="tooltip">This website provides a random verse from the Book of Mormon each time you refresh the page to help you read the word of God as often as possible. </div></p>
+        <p class="right">Using <a href="https://github.com/BraydenTW/book-of-mormon-api?tab=readme-ov-file">book-of-mormon-api</a></p>
+    </footer>
+
+    <!-- Settings Dialog -->
+    <div class="settings-dialog" id="settings-dialog">
+        <h2>Settings</h2>
+        <label for="theme">Theme:</label>
+        <select id="theme">
+            <option value="cleanBlue">cleanBlue</option>
+            <option value="green">Green</option>
+            <option value="bumbledBee">bumbledBee</option>
+            <option value="fastCar">fastCar</option>
+        </select>
+        <button id="save-settings">Save</button>
+        <button id="close-settings">Close</button>
+    </div>
+
+    <!-- Add Favorite Dialog -->
+    <div class="add-favorite-dialog" id="add-favorite-dialog">
+        <h2>Add Favorite</h2>
+        <label for="favorite-name">Name:</label>
+        <input type="text" id="favorite-name">
+        <label for="favorite-url">URL:</label>
+        <input type="text" id="favorite-url">
+        <label for="favorite-icon">Icon:</label>
+        <select id="favorite-icon">
+            <option value="&#9733;">Star</option>
+            <option value="&#128279;">Link</option>
+            <option value="&#128293;">Fire</option>
+        </select>
+        <button id="save-favorite">Save</button>
+        <button id="close-favorite">Close</button>
+    </div>
+
+
+
+
+    <!-- got to attach your scripts -->
+    <script src="./Scripts/getVerse.js"></script>
+    <script src="./Scripts/infoButton.js"></script>
+    <script src="./Scripts/time.js"></script>
+    <script src="./Scripts/settings.js"></script>
+    <script src="./Scripts/favorites.js"></script>
+</body>
+</html>

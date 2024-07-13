@@ -1,0 +1,389 @@
+/* whole body style */
+body {
+    font-family: 'Public Sans', sans-serif;
+    /* background-color: #f0f0f0;
+    background-color: #E8E6E3;
+    color: #333; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color, #E8E6E3);
+}
+
+/* verse styles */
+.container {
+    /* justify-self: center; */
+    text-align: left;
+    /* background-color: #E8E6E3; */
+    width: 700px;
+    max-height: 80vh; 
+    overflow-y: auto;
+    padding-bottom: 100px;
+}
+
+.box {
+    padding: 30px;
+    /* border: 1px solid #9a9a9a; */
+    border: 1px solid var(--accent-color2);
+    border-radius: 10px;
+    /* color: var(--accent-color2); */
+}
+
+/* for the time  */
+.time {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bolder;
+    /* color: #7991B1; */
+    color: var(--accent-color2);
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-size: 30px;
+    /* color: #36211B; */
+    color: var(--accent-color3);
+    text-align: center;
+    margin-top: 0;
+}
+
+.verse {
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--accent-color3);
+}
+
+/* footer styles */
+footer {
+    font-family: 'Public Sans', sans-serif;
+    width: 100%;
+    height: 30px;
+    /* background-color: #1a73e8;
+    background-color: #7991B1; */
+    background-color: var(--accent-color1);
+    color: white;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 1rem;
+    font-size: 14px;
+    color: white;
+
+}
+
+.right {
+    position: absolute;
+    padding-right: 30px;
+    right: 15px;
+    color: white;
+}
+
+.right a {
+    text-decoration: none;
+    color: white;
+}
+
+/* info button styles */
+.info-icon {
+    margin-left: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    left: 112px;
+    background-color: white;
+    color: #36211B;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 300px;
+    text-align: center;
+    z-index: 1;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+/* settings  */
+.settings-icon {
+    /* justify-content: self; */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--accent-color3);
+}
+
+.settings-dialog {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 15px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.settings-dialog h2 {
+    margin-top: 0;
+}
+
+.settings-dialog label {
+    display: block;
+    margin-top: 10px;
+}
+
+.settings-dialog select {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.settings-dialog button {
+    margin-top: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#settings-dialog button {
+    margin-right: 10px;
+}
+
+/* favorites */
+.favorites {
+    margin-top: 20px;
+}
+
+.favorites h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    /* color: #36211B; */
+    color: var(--accent-color3);
+    text-align: center;
+}
+
+#favorites-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#favorites-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* background: #f9f9f9; */
+    margin-top: 5px;
+
+}
+
+#favorites-list li a {
+    text-decoration: none;
+    color: var(--accent-color3);
+}
+
+.add-favorite {
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--accent-color2);
+    border: 1px solid var(--accent-color2);
+    border-radius: 20px;
+    padding: 2px;
+
+}
+
+
+/* General styles for dialogs */
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.dialog h2 {
+    margin-top: 0;
+}
+
+.dialog label {
+    display: block;
+    margin-top: 10px;
+}
+
+.dialog input, .dialog select {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.dialog button {
+    margin-top: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dialog button {
+    margin-right: 10px;
+}
+
+/* Styles for the favorites list */
+.favorites {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.favorite {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--accent-color2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.add-favorite {
+    border: 2px solid var(--accent-color2);
+    background-color: white;
+    color: var(--accent-color2);
+}
+
+/* Circle border around the "+" icon */
+.add-favorite {
+    border-radius: 50%;
+    border: 2px solid var(--accent-color2);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Specific styles for the add favorite dialog */
+.add-favorite-dialog {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+
+:root {
+    --bg-color: #E8E6E3;
+    /* footer */
+    --accent-color1: #7991B1; 
+    /* clock and box */
+    --accent-color2: #7991B1;
+    /* text color */
+    --accent-color3: #36211B;
+}
+
+body.cleanBlue {
+    --bg-color: #E8E6E3;
+    /* footer */
+    --accent-color1: #7991B1; 
+    /* clock and box */
+    --accent-color2: #7991B1;
+    /* text color */
+    --accent-color3: #36211B;
+}
+
+body.green {
+    --bg-color: #F2F2F2;
+    --accent-color1: #6C733D;
+    --accent-color2: #9DA65D;
+    --accent-color3: #202426;
+}
+
+body.bumbledBee {
+    --bg-color: #F2F2F2;
+    --accent-color1: #F2CD88;
+    --accent-color2: #F2BA52;
+    --accent-color3: #404040;
+}
+
+body.fastCar {
+    --bg-color: #F2F2F2;
+    /* footer */
+    --accent-color1: #A60303; 
+    /* clock and box */
+    --accent-color2: #F20505;
+    /* text color */
+    --accent-color3: #0D0D0D;
+}
+
+
+
+/* Color Pallets */
+.colorIdeas{
+    /* Forest Green */
+    color: #202426;
+    color: #6C733D;
+    color: #9DA65D;
+    color: #8C8C88;
+    color: #F2F2F2;
+
+    /* bumbledBee */
+    color: #F2BA52;
+    color: #F2CD88;
+    color: #F2A950;
+    color: #BFBFBF;
+    color: #404040;
+
+    /* darkAndRed */
+    color: #BFB8B0;
+    color: #F2695C;
+    color: #F20505;
+    color: #A60303;
+    color: #0D0D0D;
+
+    /* bumbledBee */
+    /* color: ;
+    color: ;
+    color: ;
+    color: ;
+    color: ; */
+
+}
