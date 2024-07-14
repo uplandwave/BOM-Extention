@@ -1,10 +1,6 @@
-
 /* whole body style */
 body {
     font-family: 'Public Sans', sans-serif;
-    /* background-color: #f0f0f0;
-    background-color: #E8E6E3;
-    color: #333; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,9 +11,7 @@ body {
 
 /* verse styles */
 .container {
-    /* justify-self: center; */
     text-align: left;
-    /* background-color: #E8E6E3; */
     width: 700px;
     max-height: 80vh; 
     overflow-y: auto;
@@ -26,10 +20,8 @@ body {
 
 .box {
     padding: 30px;
-    /* border: 1px solid #9a9a9a; */
     border: 1px solid var(--accent-color2);
     border-radius: 10px;
-    /* color: var(--accent-color2); */
 }
 
 /* for the time  */
@@ -39,7 +31,6 @@ body {
     margin-bottom: 1rem;
     text-align: center;
     font-weight: bolder;
-    /* color: #7991B1; */
     color: var(--accent-color2);
 }
 
@@ -64,12 +55,9 @@ footer {
     font-family: 'Public Sans', sans-serif;
     width: 100%;
     height: 30px;
-    /* background-color: #1a73e8;
-    background-color: #7991B1; */
     background-color: var(--accent-color1);
     color: white;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     position: fixed;
     bottom: 0;
@@ -77,7 +65,6 @@ footer {
     padding: 0 1rem;
     font-size: 14px;
     color: white;
-
 }
 
 .right {
@@ -87,9 +74,13 @@ footer {
     color: white;
 }
 
-.right a {
+footer a {
     text-decoration: none;
     color: white;
+}
+
+footer:hover a {
+    text-decoration: underline;
 }
 
 /* info button styles */
@@ -128,13 +119,13 @@ footer {
 
 /* settings  */
 .settings-icon {
-    /* justify-content: self; */
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 5px;
+    left: 5px;
     font-size: 25px;
     cursor: pointer;
     color: var(--accent-color3);
+    padding: 10px;
 }
 
 .settings-dialog {
@@ -174,52 +165,7 @@ footer {
     margin-right: 10px;
 }
 
-/* favorites */
-.favorites {
-    margin-top: 20px;
-}
-
-.favorites h2 {
-    font-family: 'Fraunces', serif;
-    font-size: 24px;
-    /* color: #36211B; */
-    color: var(--accent-color3);
-    text-align: center;
-}
-
-#favorites-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-#favorites-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    /* background: #f9f9f9; */
-    margin-top: 5px;
-
-}
-
-#favorites-list li a {
-    text-decoration: none;
-    color: var(--accent-color3);
-}
-
-.add-favorite {
-    margin-top: 10px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 30px;
-    color: var(--accent-color2);
-    border: 1px solid var(--accent-color2);
-    border-radius: 20px;
-    padding: 2px;
-
-}
-
-
-/* General styles for dialogs */
+/* popup menus */
 .dialog {
     display: none;
     position: fixed;
@@ -260,26 +206,26 @@ footer {
 
 /* favorites section */
 .favorites-section {
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
+    color: var(--accent-color3);
 }
 
 .favorites-section h2 {
     font-family: 'Fraunces', serif;
     font-size: 24px;
-    color: #36211B;
+    /* color: #36211B; */
     display: flex;
     justify-content: left;
-    padding-left: 15px;
+    padding-left: 5px;
     margin: .5rem;
 }
 
-/* favorites circles */
 .favorites {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .favorite {
@@ -300,11 +246,10 @@ footer {
 
 .add-favorite {
     border: 2px solid var(--accent-color2);
-    /* background-color: white; */
     color: var(--accent-color2);
 }
 
-/* Circle border around the "+" icon */
+/* favorites circles */
 .add-favorite {
     border-radius: 50%;
     width: 60px;
@@ -325,8 +270,9 @@ footer {
     color: var(--accent-color3);
 }
 
-/* favorites pop up*/
+/* favorites pop up */
 .add-favorite-dialog {
+    font-family: 'Fraunces', serif;
     display: none;
     position: fixed;
     top: 40%;
@@ -336,9 +282,39 @@ footer {
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 2;
+    border-radius: 10px;
+    border: 2px solid var(--accent-color2);
+    font-size: 16px;
 }
 
-/* colors and colors  */
+.faveBoxTitle {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.remove-favorite {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    background-color: var(--accent-color3);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+    font-size: 12px;
+}
+
+.favorite:hover .remove-favorite {
+    display: flex;
+}
+
+/* themes and colors  */
 :root {
     --bg-color: #E8E6E3;
     /* footer */
@@ -361,15 +337,21 @@ body.cleanBlue {
 
 body.green {
     --bg-color: #F2F2F2;
+    /* footer */
     --accent-color1: #6C733D;
+    /* clock and box */
     --accent-color2: #9DA65D;
+    /* text color */
     --accent-color3: #202426;
 }
 
 body.bumbledBee {
     --bg-color: #F2F2F2;
+    /* footer */
     --accent-color1: #F2CD88;
+    /* clock and box */
     --accent-color2: #F2BA52;
+    /* text color */
     --accent-color3: #404040;
 }
 
@@ -383,36 +365,22 @@ body.fastCar {
     --accent-color3: #0D0D0D;
 }
 
+body.darkButBlue {
+    --bg-color: #010d23;
+    /* footer */
+    --accent-color1: #03223f; 
+    /* clock and box */
+    --accent-color2: #038bbb;
+    /* text color */
+    --accent-color3: #038bbb;
+}
 
-
-/* Color Pallets */
-.colorIdeas{
-    /* Forest Green */
-    color: #202426;
-    color: #6C733D;
-    color: #9DA65D;
-    color: #8C8C88;
-    color: #F2F2F2;
-
-    /* bumbledBee */
-    color: #F2BA52;
-    color: #F2CD88;
-    color: #F2A950;
-    color: #BFBFBF;
-    color: #404040;
-
-    /* darkAndRed */
-    color: #BFB8B0;
-    color: #F2695C;
-    color: #F20505;
-    color: #A60303;
-    color: #0D0D0D;
-
-    /* bumbledBee */
-    /* color: ;
-    color: ;
-    color: ;
-    color: ;
-    color: ; */
-
+body.darkGreen {
+    --bg-color: #072B1A;
+    /* footer */
+    --accent-color1: #0A2418; 
+    /* clock and box */
+    --accent-color2: #F2E2D7;
+    /* text color */
+    --accent-color3: #F2E2D7;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <!-- Base things you need -->
+    <!-- base things you need -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOM Day</title>
@@ -37,19 +37,13 @@
 
         <!-- we have the meat -->
         <div class="box">
-            <h1>Random Book of Mormon Verse</h1>
+            <h1>Book of Mormon Verse</h1>
             <div id="verse" class="verse">Loading...</div>
         </div>
         
-        <!-- Favorites Queue -->
-        <!-- <div class="favorites">
-            <h2>Favorites</h2>
-            <ul id="favorites-list"></ul>
-            <div id="add-favorite" class="add-favorite">&#43; </div>
-        </div> -->
+        <!-- favorite circles -->
         <div class="favorites-section">
             <h2>Favorites</h2>
-            <hr>
             <div class="favorites" id="favorites">
                 <div class="favorite add-favorite" id="add-favorite">+</div>
             </div>
@@ -58,47 +52,57 @@
 
     <!-- footer holding footer things -->
     <footer>
-        <p>Created by UplandWave | 2024 | Under open source license |
+        <p>Created by <a href="https://github.com/uplandwave">UplandWave</a> | 2024 | Under open source license |
         <div class="info-icon" id="info-icon">&#9432;</div>
-        <div class="tooltip" id="tooltip">This website provides a random verse from the Book of Mormon each time you refresh the page to help you read the word of God as often as possible. </div></p>
+        <div class="tooltip" id="tooltip">This Chrome extension provides a random verse from the Book of Mormon each time you open a new tab.</div></p>
         <p class="right">Using <a href="https://github.com/BraydenTW/book-of-mormon-api?tab=readme-ov-file">book-of-mormon-api</a></p>
     </footer>
 
-    <!-- Settings Dialog -->
+    <!-- settings dialog -->
     <div class="settings-dialog" id="settings-dialog">
         <h2>Settings</h2>
         <label for="theme">Theme:</label>
         <select id="theme">
-            <option value="cleanBlue">cleanBlue</option>
+            <option value="cleanBlue">Clean Blue</option>
             <option value="green">Green</option>
-            <option value="bumbledBee">bumbledBee</option>
-            <option value="fastCar">fastCar</option>
+            <option value="bumbledBee">Bumbled Bee</option>
+            <option value="fastCar">Fast Car</option>
+            <option value="darkButBlue">Dark Blue</option>
+            <option value="darkGreen">Dark Green</option>
         </select>
         <button id="save-settings">Save</button>
         <button id="close-settings">Close</button>
     </div>
 
-    <!-- Add Favorite Dialog -->
+    <!-- favorite dialog -->
     <div class="add-favorite-dialog" id="add-favorite-dialog">
-        <h2>Add Favorite</h2>
+        <h2 class="faveBoxTitle">Add Favorite</h2>
         <label for="favorite-name">Name:</label>
         <input type="text" id="favorite-name">
         <label for="favorite-url">URL:</label>
         <input type="text" id="favorite-url">
         <label for="favorite-icon">Icon:</label>
         <select id="favorite-icon">
-            <option value="&#9733;">Star</option>
-            <option value="&#128279;">Link</option>
-            <option value="&#128293;">Fire</option>
-            <option value="&#128581;">No good</option>
-            <!-- Link to all emojis https://www.w3schools.com/charsets/ref_emoji_body.asp -->
+            <option value="&#9733;">★ Star</option>
+            <option value="&#128293;">🔥 Fire</option>
+            <option value="&#128581;">🙅 No good</option>
+            <option value="&#128378;">🕺 Dancing</option>
+            <option value="&#129318;">🤦 Face palm</option>
+            <option value="&#128123;">👻 Ghost</option>
+            <option value="&#128128;">💀 Skull</option>
+            <option value="&#128064;">👀 Eyes</option>
+            <option value="&#129505;">🧡 Heart</option>
+            <option value="&#128169;">💩 Poo</option>
+            <option value="&#128190;">💾 Floppy disk</option>
+            <option value="&#128204;">📌 Pushpin</option>
+            <option value="&#128232;">📨 Envelope</option>
+            <option value="&#127965;">🏝 Island</option>
+            <option value="&#128652;">🚌 Bus</option>
+            <!-- link to all emojis https://www.w3schools.com/charsets/ref_emoji_body.asp -->
         </select>
         <button id="save-favorite">Save</button>
         <button id="close-favorite">Close</button>
     </div>
-
-
-
 
     <!-- got to attach your scripts -->
     <script src="./Scripts/getVerse.js"></script>

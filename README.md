@@ -1,14 +1,22 @@
-# BOM-Day
+# BOM-Day Extension (Book of Mormon Daily)
 ![example](./Images/example.png)
 
 ## Overview
 **BOM-Day** is a simple and easy to use Chrome extension that displays a new and random verse from the Book of Mormon. With the ability to **save links favorite sites** and **change the themes** to fit your preferences.
 
 ## Host It Locally  
-I have **No** money so feel free to host this for yourself. I'll add instructions on how to do this if you will be wait a sec. Thanks Boo!
+I have no money to become a Chrome developer, but you can host Chrome extension from a file on your own computer. 
+
+**Instructions**
+1. Go to the "Manage Extensions" tab
+2. Turn "Developer Mode"
+3. Click "Load Unpacked" 
+4. Find where you cloned this repository on your computer and select the folder
+5. It should now appear as a normal extension
+
 
 ## Intended Use
-Created to serve as a new default home screen for new browser tabs or windows. It provides a quick reminder to read the word of God as often as possible and looks good while doing so. (if thats something you get behind)
+Created to serve as a new default home screen for new tabs or windows. It provides a quick reminder to read the scriptures often and looks great. (If thats something you get behind)
 
 ## Features
 - **Random Verse:** Pulls a new and random verse from the Book of Mormon.
@@ -22,7 +30,5 @@ Created to serve as a new default home screen for new browser tabs or windows. I
 ## License
 **This project is licensed under the EDUCATIONAL/DEMONSTRATION USE LICENSE - see the [LICENSE](./LICENSE.txt) file for details.**
 
-# Work in Progress
+## Work in Progress
 This is still being developed so check back to get and updates that might come out. Also feel free to suggest features you might want.
-
-- Add local storage Clearing. (maybe a way to remove one link)
