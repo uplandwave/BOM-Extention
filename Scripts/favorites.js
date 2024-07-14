@@ -1,34 +1,3 @@
-// // localStorage.removeItem('favorites');
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     const favoritesList = document.getElementById("favorites-list");
-//     const addFavorite = document.getElementById("add-favorite");
-
-//     // Load saved favorites from local storage
-//     const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-//     savedFavorites.forEach(favorite => addFavoriteToList(favorite));
-
-//     addFavorite.addEventListener("click", () => {
-//         const name = prompt("Enter the name of the website:");
-//         const url = prompt("Enter the URL of the website:");
-//         const icon = prompt("Enter the URL of the icon:");
-
-//         if (name && url && icon) {
-//             const favorite = { name, url, icon };
-//             savedFavorites.push(favorite);
-//             localStorage.setItem("favorites", JSON.stringify(savedFavorites));
-//             addFavoriteToList(favorite);
-//         }
-//     });
-
-//     function addFavoriteToList(favorite) {
-//         const li = document.createElement("li");
-//         li.innerHTML = `<a href="${favorite.url}" target="_blank"><img src="${favorite.icon}" alt="${favorite.name}" width="16" height="16"> ${favorite.name}</a>`;
-//         favoritesList.appendChild(li);
-//     }
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
     const settingsIcon = document.getElementById("settings-icon");
     const settingsDialog = document.getElementById("settings-dialog");
@@ -116,6 +85,12 @@ document.addEventListener("DOMContentLoaded", () => {
         favoriteElement.onclick = () => {
             window.open(favorite.url, "_blank");
         };
+
+        const favoriteNameElement = document.createElement("div");
+        favoriteNameElement.className = "favorite-name";
+        favoriteNameElement.textContent = favorite.name;
+
+        favoriteElement.appendChild(favoriteNameElement);
         favoritesContainer.insertBefore(favoriteElement, addFavoriteButton);
     }
 });
