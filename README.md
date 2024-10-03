@@ -31,4 +31,6 @@ Created to serve as a new default home screen for new tabs or windows. It provid
 **This project is licensed under the EDUCATIONAL/DEMONSTRATION USE LICENSE - see the [LICENSE](./LICENSE.txt) file for details.**
 
 ## Work in Progress
-This is still being developed so check back to get and updates that might come out. Also feel free to suggest features you might want.
+- Adding number shortcut fictionality to new tab for fast redirecting
+- Building in background image api
+- Adding meme api click to show funtion
